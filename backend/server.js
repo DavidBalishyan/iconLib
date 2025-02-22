@@ -11,6 +11,9 @@ const PORT = 3001;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+    res.send("Specify icons with /icon/:name");
+})
 
 app.get("/icon/:name", (req, res) => {
     const iconName = req.params.name;
